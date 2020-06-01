@@ -43,7 +43,7 @@ def is_valid_email_address(s):
 
     
 
-# do not run the following, if this file was imported as a module!
+# This if ensures that the following is NOT run if this file was imported as a module (which we'll do next!)
 if __name__ == "__main__":
 
     # tests, including edge cases (incomplete? add more!)
@@ -59,7 +59,7 @@ if __name__ == "__main__":
         "chris@megasavings.org",
         "tc@tank.com",
         ]
-
+    # validate each email from the list
     for e in email_list:
         r, s = is_valid_email_address(e) 
         if r == None:

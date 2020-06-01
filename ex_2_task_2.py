@@ -21,6 +21,8 @@
 #   - if you didn't get None (r != None), then r contains an error code, which you could use in your 
 #     flow control for branching, if you want to do something fancy
 
+# Optionally, you can use regex for all this!
+
 # Once you're solved this, run some tests to show me that it works. 
 # Again, manually copy/paste the console output in a text file (results2.txt)
 

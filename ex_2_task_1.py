@@ -58,8 +58,9 @@ def is_valid_email_address(s):
         error_list.append('1')
 
     # Error status 2
-    # ensure length is between 3 and 16 characters
-    if len(s) <= 3 or len(s) >= 16:
+    # ensure length is between 3 and 16 character
+    char_2 = s.split('@')[0]
+    if len(char_2) <= 3 or len(char_2) >= 16:
         error_list.append('2')  # append errors to list
 
     # Error status 3
@@ -100,7 +101,8 @@ def is_valid_email_address(s):
     if len(error_list) == 0:
         return ('Pass', error_dict['Pass'])
     else:
-        return [(err_code, error_dict[err_code]) for err_code in error_list]
+        # returning first error for this project
+        return [(err_code, error_dict[err_code]) for err_code in error_list][0]
 
 
 # This if ensures that the following is NOT run if this file was imported as a module (which we'll do next!)
@@ -125,4 +127,5 @@ if __name__ == "__main__":
         if r == None:
             print(e, s)  # OK
         else:
-            print(f"{e} - error: {s}, error code: {r}")  # Error
+           print(f"{e} - error: {s}, error code: {r}")  # Error
+          

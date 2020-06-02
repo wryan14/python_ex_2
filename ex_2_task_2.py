@@ -55,7 +55,7 @@ while True:
 
     print(email, "is invalid!")
     print("Reason:", err_str)
-    print(f"Try again, {attempts_left} attempts left")
+    print("Try again, {attempts_left} attempts left")
 
 # your code - end
 if not gave_up:
